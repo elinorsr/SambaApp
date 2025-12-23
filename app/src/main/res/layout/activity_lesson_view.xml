@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pink_bow_background"
+    android:padding="16dp">
+
+    <!-- Header Section -->
+    <LinearLayout
+        android:id="@+id/header_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/tv_hello_user"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Hello Elinor!"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:gravity="start" />
+
+        <ImageView
+            android:id="@+id/img_profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_profile"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:scaleType="centerCrop"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Profile image" />
+
+
+    </LinearLayout>
+
+    <!-- Difficulty Tabs -->
+    <LinearLayout
+        android:id="@+id/difficulty_tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header_section"
+        android:orientation="horizontal"
+        android:background="@drawable/pink_border_button"
+        android:padding="4dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/tab_beginners"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Beginners"
+            android:textSize="16sp"
+            android:textColor="@color/blue"
+            android:background="@drawable/pink_border_button"
+            android:gravity="center"
+            android:padding="12dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tab_advanced"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Advanced"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:padding="12dp" />
+
+        <TextView
+            android:id="@+id/tab_expert"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Expert"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            android:padding="12dp" />
+
+    </LinearLayout>
+
+    <!-- Lessons List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_lessons"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/difficulty_tabs"
+        android:layout_above="@id/bottom_space"
+        android:clipToPadding="false"
+        android:paddingBottom="80dp" />
+
+    <!-- Space for FAB -->
+    <View
+        android:id="@+id/bottom_space"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true" />
+
+    <!-- Floating Action Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_lesson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_add"
+        app:backgroundTint="@color/pink_primary"
+        app:tint="@android:color/white"
+        app:elevation="8dp" />
+
+</RelativeLayout>

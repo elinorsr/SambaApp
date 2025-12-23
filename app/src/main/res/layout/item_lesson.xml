@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    android:background="#F44336">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <!-- Lesson Icon -->
+        <ImageView
+            android:id="@+id/iv_lesson_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/basic_icon_image"
+            android:padding="8dp"
+            android:layout_marginEnd="16dp" />
+
+
+        <!-- Lesson Info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_lesson_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Basic Steps"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/tv_lesson_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forward &amp; Back Basic"
+                android:textSize="14sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_marginTop="2dp" />
+        </LinearLayout>
+
+        <!-- Action Buttons -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+    <!-- Edit Button (for instructors only) -->
+    <ImageButton
+        android:id="@+id/btn_edit"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_edit"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="8dp"
+        android:contentDescription="Edit Lesson" />
+
+    <!-- Play Button -->
+    <ImageButton
+        android:id="@+id/iv_play_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_play"
+        android:background="@drawable/pink_border_button"
+        android:padding="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <!-- Heart + Watched (vertical) -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Heart Button -->
+        <ImageButton
+            android:id="@+id/iv_heart_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_heart_outline"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:contentDescription="Favorite" />
+
+        <!-- Watched Checkbox -->
+        <CheckBox
+            android:id="@+id/cb_watched"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/pink"
+            android:text=""
+            android:layout_marginTop="2dp"/>
+    </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

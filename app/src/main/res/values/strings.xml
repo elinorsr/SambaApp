@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">SambaApp</string>
+    <string-array name="levels">
+        <item>Beginner</item>
+        <item>Intermediate</item>
+        <item>Advanced</item>
+    </string-array>
+
+    <string-array name="genders">
+        <item>Female</item>
+        <item>Male</item>
+        <item>Other</item>
+    </string-array>
+    <string name="hello_edit">Elinor let’s edit!</string>
+    <string name="edit_mode">Edit mode</string>
+    <string name="lesson_title">Lesson Title</string>
+    <string name="lesson_subtitle">Lesson Subtitle</string>
+    <string name="lesson_time">Lesson Time</string>
+    <string name="lesson_description">Lesson Description</string>
+    <string name="add_file">Adding file</string>
+    <string name="choose_video">Choose video</string>
+    <string name="video_preview">Video preview</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="back">Back</string>
+    <string name="forward_back_basic"><![CDATA[Forward & Back Basic]]></string>
+    <string-array name="levels_basic">
+        <item>Beginner</item>
+        <item>Intermediate</item>
+        <item>Advanced</item>
+    </string-array>
+
+    <string-array name="levels_full">
+        <item>Beginner</item>
+        <item>Advanced</item>
+        <item>Expert</item>
+        <item>Instructor</item>
+    </string-array>
+
+
+</resources>

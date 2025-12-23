@@ -1,0 +1,256 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pink_bow_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <!-- Profile Image -->
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/profile_placeholder"
+            android:scaleType="centerCrop"
+            android:background="@drawable/circle_background"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Main Title -->
+        <TextView
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Elinor let's edit!"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#444444"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Edit Mode with Icon -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_edit_mode"
+                android:layout_marginEnd="4dp" />
+
+            <TextView
+                android:id="@+id/edit_mode_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit mode"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+        <!-- Lesson description -->
+        <TextView
+            android:id="@+id/lesson_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forward &amp; Back Basic"
+            android:textStyle="italic"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:layout_marginTop="4dp" />
+
+
+
+
+        <!-- כותרת השיעור -->
+        <EditText
+            android:id="@+id/et_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:hint="Lesson title"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:background="@null"
+
+            android:layout_marginBottom="16dp" />
+        <TextView
+            android:id="@+id/tv_lesson_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="שם השיעור" />
+
+
+        <!-- בחירת קובץ + תצוגת וידאו אחד ליד השני -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Adding file"
+                    android:textStyle="italic" />
+
+                <Button
+                    android:id="@+id/btn_upload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CHOOSE VIDEO"
+                    android:backgroundTint="#A020F0"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Video preview"
+                    android:textStyle="italic" />
+
+                <VideoView
+                    android:id="@+id/video_preview"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- מי הוסיף -->
+        <EditText
+            android:id="@+id/et_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Added by"
+            android:textSize="16sp"
+            android:textColor="#777777"
+            android:layout_marginBottom="16dp" />
+
+
+
+        <!-- תיאור השיעור -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lesson description"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/et_description"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@android:drawable/editbox_background"
+            android:padding="12dp"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:layout_marginBottom="24dp" />
+
+        <!-- כפתורים -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <!-- Back button aligned left -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="start|center_vertical">
+
+                <ImageButton
+                    android:id="@+id/btn_back"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:src="@drawable/ic_arrow_back"
+                    android:background="@drawable/circle_background_black"
+                    android:contentDescription="Back" />
+            </LinearLayout>
+
+            <!-- Save and Delete buttons aligned right -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="end|center_vertical"
+                android:layout_marginTop="4dp">
+
+                <!-- Save button + label -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_marginEnd="16dp">
+
+                    <ImageButton
+                        android:id="@+id/btn_save"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_save"
+                        android:background="@null"
+                        android:contentDescription="Save" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SAVE"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <!-- Delete button -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+                <ImageButton
+                    android:id="@+id/btn_delete"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/ic_delete"
+                    android:background="@null"
+                    android:contentDescription="Delete" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DELETE"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

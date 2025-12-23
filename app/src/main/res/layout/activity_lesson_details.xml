@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pink_bow_background"
+    android:padding="16dp">
+
+
+    <!-- כותרת עליונה עם תמונת פרופיל וטקסט -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:id="@+id/profile_image_view"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="12dp"
+            android:scaleType="centerCrop"
+
+            android:src="@drawable/ic_profile" />
+
+        <TextView
+            android:id="@+id/tv_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Elinor let’s learn!"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+
+    </LinearLayout>
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <!-- כותרת השיעור -->
+            <TextView
+                android:id="@+id/tv_lesson_title"
+                android:text="Basic Steps"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!-- כותרת משנה -->
+            <TextView
+                android:id="@+id/tv_lesson_subtitle"
+                android:text="Forward &amp; Back Basic"
+                android:textSize="16sp"
+                android:textStyle="italic"
+                android:layout_marginBottom="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <!-- וידאו -->
+            <VideoView
+                android:id="@+id/video_view"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="24dp" />
+
+            <!-- תיאור השיעור -->
+            <TextView
+                android:id="@+id/tv_description"
+                android:text="Learn the foundation of Salsa dancing..."
+                android:textSize="16sp"
+                android:padding="12dp"
+                android:background="@drawable/pink_border_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!-- כפתור חזור -->
+            <Button
+                android:id="@+id/btn_back"
+                android:text="Back"
+                android:layout_marginTop="24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

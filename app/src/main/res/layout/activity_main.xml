@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@drawable/pink_bow_background"
+    tools:context=".main.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="32dp"
+        android:paddingBottom="32dp">
+
+        <!-- כותרת ראשית -->
+        <TextView
+            android:text="SALSA APP"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- תת כותרת -->
+        <TextView
+            android:text="Welcome to SALSA"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- שדה אימייל -->
+        <EditText
+            android:id="@+id/edit_email"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/input_field_background" />
+
+        <!-- שדה סיסמה -->
+        <EditText
+            android:id="@+id/edit_password"
+            android:hint="Password"
+            android:textStyle="bold"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:textSize="18sp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/input_field_background" />
+
+        <!-- שדה שם מלא -->
+        <EditText
+            android:id="@+id/edit_full_name"
+            android:hint="Full Name"
+            android:inputType="textPersonName"
+            android:textStyle="bold"
+            android:background="@drawable/input_field_background"
+            android:padding="12dp"
+            android:textSize="20sp"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- שדה גיל -->
+        <EditText
+            android:id="@+id/edit_age"
+            android:hint="Age"
+            android:textStyle="bold"
+            android:inputType="number"
+            android:background="@drawable/input_field_background"
+            android:padding="12dp"
+            android:textSize="20sp"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- בחירת תפקיד -->
+        <LinearLayout
+            android:layout_marginTop="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:background="@drawable/pink_border_button"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <RadioGroup
+                android:id="@+id/role_group"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radio_guide"
+                    android:text="Guide"
+                    android:textStyle="italic"
+
+                    android:padding="8dp"
+                    android:textSize="20sp"
+                    android:textColor="#000000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:id="@+id/radio_participant"
+                    android:text="Participant"
+                    android:textStyle="italic"
+
+                    android:padding="8dp"
+                    android:textSize="20sp"
+                    android:textColor="#000000"
+                    android:layout_marginStart="24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- הצהרת בריאות -->
+        <CheckBox
+            android:id="@+id/checkbox_health"
+            android:text="Health declaration"
+            android:textStyle="italic"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:layout_marginTop="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!-- כפתור המשך -->
+        <Button
+            android:id="@+id/btn_continue"
+            android:text="CONTINUE"
+            android:enabled="false"
+            android:textAllCaps="false"
+            android:textStyle="italic"
+            android:textColor="#E91E87"
+            android:textSize="20sp"
+            android:layout_marginTop="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:background="@drawable/pink_border_button" />
+
+        <Button
+            android:id="@+id/btn_login_existing"
+            android:text="Already registered? Log in"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:textColor="#3F51B5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:background="@drawable/pink_border_button" />
+
+
+    </LinearLayout>
+</ScrollView>
